@@ -14,7 +14,10 @@ namespace CarDealership.Models
 
     public int Id{ get; }
 
-    private static ArrayList<Car> _cars = new ArrayList<Car>();
+    
+    // private static ArrayList _instances = new ArrayList<Car> {};
+
+    private static List<Car> _instances = new List<Car> {};
 
     public Car(string description, string model, string make, int year)
     {
@@ -22,10 +25,17 @@ namespace CarDealership.Models
       Model = model;
       Make = make;
       Year = year;
-      _cars.Add(this);
+      _instances.Add(this);
       Id = _instances.Count;
     }
 
-    
+    public static List<Car> GetAll()
+    {
+      return _instances;
+    }
+    public static Car Find(int searchId)
+    {
+      return _instances[searchId-1];
+    }
   }
 }

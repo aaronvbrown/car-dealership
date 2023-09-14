@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>car_dealership.Tests</RootNamespace>
+    <!-- <RootNamespace>CarDealership.Tests</RootNamespace> -->
 
 
     <IsPackable>false</IsPackable>
@@ -13,6 +13,10 @@
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
     <PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CarDealership\CarDealership.csproj" />
   </ItemGroup>
 
 </Project>
